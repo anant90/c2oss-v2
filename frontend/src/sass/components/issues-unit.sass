@@ -1,0 +1,85 @@
+.issues-unit
+	@include outer-container()
+	font-family: $sans-serif-font-family
+	.filters
+		@include span-columns(9)
+		@include media($tablet-down)
+			@include span-columns(12)
+			@include omega()
+		padding: 2em 1em
+		.filter
+			display: inline-block
+			cursor: pointer
+			padding: 0 10px
+			font-size: 1.25em
+			color: $light-gray
+			&.active
+				font-family: $sans-serif-font-family-bold
+				color: $blue
+			&:first-child
+				padding-left: 0
+	.sync-button-container
+		@include span-columns(3)
+		@include omega()
+		@include media($tablet-down)
+			display: none
+		text-align: right
+		.sync-button
+			margin: 28px 20px 0 0
+			font-family: $sans-serif-font-family-bold
+			text-transform: uppercase
+			width: 190px
+			height: 35px
+			&.disabled
+				cursor: auto
+				background-color: lightgray
+		.last-synced
+			color: $light-gray
+			font-size: 0.75em
+			font-family: $sans-serif-font-family-light
+			margin: 5px 20px 0 0
+	.loader-with-message
+		@include span-columns(12)
+		text-align: center
+		font-size: 1.5em
+		.message
+			padding-top: 50px
+		.loader
+			transform: translateX(-50%)
+	.issue
+		@include outer-container()
+		padding: 0 1em
+		&:nth-child(even)
+			background-color: $gray250
+		a
+			color: $dark-gray
+		.float-left
+			@include span-columns(8)
+			padding: 13px 0
+		.float-right
+			@include shift(1)
+			@include span-columns(3)
+			@include omega()
+			text-align: right
+			padding: 13px 0
+		.index, .byline, .comments-count
+			color: $light-gray
+		.index, .repo
+			font-size: 1.125em
+		.title
+			font-size: 1.25em
+		.title, .repo
+			padding-bottom: 4px
+		.byline, .comments-count
+			font-size: 0.875em
+		.index
+			position: absolute
+			margin-left: -4em
+			margin-top: 0.05em
+			width: 2.5em
+			text-align: right
+		.repo
+			white-space: nowrap
+			overflow: hidden
+		.assignee
+			display: inline-block

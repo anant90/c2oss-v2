@@ -1,3 +1,7 @@
 django
 gunicorn
 django-heroku
+redis
+rauth
+python-dateutil
+rq

@@ -1,0 +1,74 @@
+.hero-unit
+	@include outer-container()
+	margin-top: 8em
+	@include media($tablet-down)
+		margin-top: 2em
+		margin-bottom: 2em
+	&:before
+		background-image: url(../assets/patterns/header-pattern.png)
+		position: absolute
+		content: ''
+		left: 0
+		right: 0
+		top: 0
+		height: 20em
+		width: 100%
+		z-index: -1
+		@include media($tablet-down)
+			height: 20em
+
+	.user-box
+		color: white
+		@include span-columns(3)
+		@include media($tablet-down)
+			width: 100%
+			margin: 0 auto
+	.home-link
+		@include media($desktop-down)
+			display: none
+	.user-info
+		padding: 3em 0
+		@include media($desktop-down)
+			padding-left: 1em
+		@include media($tablet-down)
+			padding: 0 0 1em
+			margin-left: 50%
+			transform: translateX(-50%)
+		.avatar-image
+			width: 75px
+			height: 75px
+			border-radius: 100%
+			position: absolute
+		.shifted-right
+			padding-left: 100px
+		.name
+			padding-bottom: 2px
+			padding-top: 16px
+			font-family: $sans-serif-font-family-bold
+			font-size: 1.5em
+			display: block
+		.username
+			padding-top: 2px
+			padding-bottom: 16px
+			font-family: $sans-serif-font-family-bold
+			font-size: 0.9em
+			display: block
+	.user-stats
+		@include shift(6)
+		@include span-columns(3)
+		@include omega()
+		@include media($tablet-down)
+			width: auto
+			margin: 0 auto
+		table
+			color: white
+			table-layout: fixed
+			font-family: $sans-serif-font-family-bold
+			font-size: 0.7em
+			tr.blank-row
+				height: 1.5em
+			td:first-child
+				width: 40%
+				color: $blue
+				text-align: right
+				padding-right: 1.25em

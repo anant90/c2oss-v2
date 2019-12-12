@@ -1,0 +1,46 @@
+{
+  "checksum": {
+    "previous": "5e15f26a7bfdd04dca585db0c1c8933e7beec4de7938cd114be7c3fc220e05b8",
+    "current": "5e15f26a7bfdd04dca585db0c1c8933e7beec4de7938cd114be7c3fc220e05b8"
+  },
+  "fonts": [
+    "output/icons-font.ttf",
+    "output/icons-font.svg",
+    "output/icons-font.woff",
+    "output/icons-font.eot"
+  ],
+  "glyphs": {
+    "github-logo": {
+      "codepoint": 61710,
+      "source": "vectors/github-logo.svg"
+    }
+  },
+  "options": {
+    "autowidth": true,
+    "config": "fontcustom.yml",
+    "css_selector": ".icon-{{glyph}}",
+    "debug": false,
+    "font_name": "icons-font",
+    "force": false,
+    "input": {
+      "templates": "templates",
+      "vectors": "vectors"
+    },
+    "no_hash": true,
+    "output": {
+      "css": "../../sass/base",
+      "fonts": "output",
+      "preview": "output"
+    },
+    "preprocessor_path": "",
+    "quiet": false,
+    "templates": [
+      "preview",
+      "icons.sass"
+    ]
+  },
+  "templates": [
+    "output/icons-font-preview.html",
+    "../../sass/base/icons.sass"
+  ]
+}

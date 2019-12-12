@@ -1,0 +1,9 @@
+@mixin underline
+	background: linear-gradient($dark-gray, $dark-gray) no-repeat
+	background-size: 100% 1px
+	background-position: 0 1.15em
+	text-shadow: .05em 0 $bg-gray, -0.05em 0 $bg-gray
+	&:focus
+		background: linear-gradient($blue, $blue) no-repeat
+		background-size: 100% 1px
+		background-position: 0 1.15em

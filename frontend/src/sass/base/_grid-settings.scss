@@ -1,0 +1,6 @@
+@import "../neat/neat-helpers";
+
+// Define your breakpoints
+$tablet-down: new-breakpoint(max-width 768px 12);
+$mobile-down: new-breakpoint(max-width 480px 4);
+$desktop-down: new-breakpoint(max-width 1088px 12);

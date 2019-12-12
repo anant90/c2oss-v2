@@ -1,0 +1,25 @@
+@font-face
+  font-family: "<%= font_name %>"
+  src: url(<%= woff_data_uri %>)
+  font-weight: normal
+  font-style: normal
+
+
+@mixin icon
+  display: inline-block
+  font-family: "<%= font_name %>"
+  font-style: normal
+  font-weight: normal
+  font-variant: normal
+  line-height: 1
+  text-decoration: inherit
+  text-rendering: optimizeLegibility
+  text-transform: none
+  -moz-osx-font-smoothing: grayscale
+  -webkit-font-smoothing: antialiased
+  font-smoothing: antialiased
+  speak: none
+
+<% @glyphs.each do |name, value| %>
+@mixin icon-<%= name.to_s %>
+  content: "\<%= value[:codepoint].to_s(16) %>"<% end %>

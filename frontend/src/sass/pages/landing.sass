@@ -1,0 +1,60 @@
+.landing-page-wrapper
+  @include outer-container
+  margin-top: 9em
+  @include media($tablet-down)
+    margin-top: 4em
+
+.landing-page
+  @include shift(1)
+  @span-columns(10)
+  @include media($tablet-down)
+    margin-left: 0
+
+.landing-logo
+  font-family: $heading-font-family
+  font-size: 3em
+  @include media($tablet-down)
+    font-size: 2em
+
+.landing-copy
+  max-width: 50%
+  font-size: 1.125em
+  line-height: 1.5
+  padding: 1em 0 3em
+  @include media($tablet-down)
+    font-size: 1em
+
+.login-button
+  display: flex
+  width: 17em
+  border-radius: 0.75em
+  margin-bottom: 0.25em
+  background-color: $blue
+  padding: 0.5em
+  cursor: pointer
+  .github-logo
+    margin: auto
+    color: white
+    font-size: 2em
+    &:before
+      @include icon
+      @include icon-github-logo
+  .cta
+    margin: auto
+    color: white
+    font-family: $lato-bold
+    font-size: 1.125em
+
+.reassurance-wrapper
+  width: 17em
+  display: flex
+.reassurance
+  font-family: $sans-serif-font-family
+  font-size: 0.875em
+  margin: auto
+  color: $light-gray
+
+.landing-logo, .landing-copy, .login-button, .reassurance-wrapper
+  @include media($mobile-down)
+    max-width: 90%
+    margin: 1em auto
