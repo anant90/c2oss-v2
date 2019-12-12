@@ -13,10 +13,6 @@ import api.views
 # Learn more here: https://docs.djangoproject.com/en/2.1/topics/http/urls/
 
 urlpatterns = [
-    # Examples:
-    # path(r'^$', 'c2oss.views.home', name='home'),
-    # path(r'^blog/', include('blog.urls')),
-
     re_path(r'^login/github/?$', webapp.views.oauth_github_authorize_url_redirect, name='oauth_github_authorize_url_redirect'),
     re_path(r'^login/github/callback/?$', webapp.views.oauth_github_callback, name='oauth_github_callback'),
     re_path(r'^api/user/?$', api.views.get_user, name='get_user'),

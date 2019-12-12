@@ -17,7 +17,7 @@ q = Queue(connection=conn)
 
 
 def get_user(request):
-	if request.user.is_authenticated():
+	if request.user.is_authenticated:
 		u = request.user
 		result = {
 			"name": u.name,
@@ -35,7 +35,7 @@ def get_user(request):
 		raise Http404
 
 def get_issues(request):
-	if request.user.is_authenticated():
+	if request.user.is_authenticated:
 		u = request.user
 		filters = request.GET.get("filters", "").split(",")
 
@@ -96,7 +96,7 @@ def refresh_data(user, request=None, isQuick=False):
 	if u.last_synced is not None and (timezone.now() - u.last_synced < timedelta(hours=3)):
 		return
 
-	if u.is_authenticated():
+	if u.is_authenticated:
 		session = OAuth2Session(
 			client_id=settings.GITHUB_CLIENT_ID,
 			client_secret=settings.GITHUB_CLIENT_SECRET,
