@@ -19,6 +19,5 @@ urlpatterns = [
     re_path(r'^api/issues/?$', api.views.get_issues, name='get_issues'),
     re_path(r'^api/refresh/?$', api.views.non_blocking_refresh_data, name='non_blocking_refresh_data'),
     re_path(r'^logout/?$', webapp.views.logout_view, name='logout_view'),
-    re_path(r'^.well-known/acme-challenge/.*$', webapp.views.acme_challenge, name='acme-challenge'),
-    re_path(r'^.*$', webapp.views.index, name='index'),
+    re_path(r'^.*$', webapp.views.index, name='index')
 ]
