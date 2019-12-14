@@ -30,6 +30,9 @@ def logout_view(request):
 	logout(request)
 	return HttpResponseRedirect('/')
 
+def acme_challenge(request):
+	return HttpResponse('2uKet-fbDNZzTxL3FHYQ2BoRV0m_8xbpsZwrHHLfZ80.oEQeuXo-qIisxaOmQc85EsZB0XRWR32mhFPUKchFCuo')
+
 def oauth_github_authorize_url_redirect(request):
 	params = {
 		'scope': 'public_repo'
