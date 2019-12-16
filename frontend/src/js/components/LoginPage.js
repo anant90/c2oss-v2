@@ -6,7 +6,7 @@ class LoginPage extends React.Component{
     return (
       <div className="landing-page-wrapper">
         <div className="landing-page">
-          <Link className="home-link" to="/">contributetooss.org</Link>
+          <Link className="home-link" to="/">c2oss.com</Link>
           <h1 className="landing-logo">Contribute to Open Source Software</h1>
           <div className="landing-copy">
             <p>This little tool helps you to contribute more to open source projects you like by helping you find open issues to work on.</p>

@@ -24333,7 +24333,7 @@
 	          _react2.default.createElement(
 	            _reactRouter.Link,
 	            { className: 'home-link', to: '/' },
-	            'contributetooss.org'
+	            'c2oss.com'
 	          ),
 	          _react2.default.createElement(
 	            'h1',
@@ -24939,7 +24939,7 @@
 	          _react2.default.createElement(
 	            _reactRouter.Link,
 	            { className: 'home-link', to: '/' },
-	            'contributetooss.org'
+	            'c2oss.com'
 	          ),
 	          _react2.default.createElement(
 	            'div',
